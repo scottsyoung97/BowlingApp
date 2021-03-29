@@ -40,7 +40,7 @@ namespace BowlingApp.Infrastructure
             {
                 TagBuilder individualTag = new TagBuilder("a");
 
-                KeyValuePairs["PageNum"] = i;
+                KeyValuePairs["pageNum"] = i;
                 individualTag.Attributes["href"] = urlHelp.Action("Index",KeyValuePairs);
                 individualTag.InnerHtml.Append(i.ToString());
 

@@ -23,7 +23,7 @@ namespace BowlingApp.Controllers
 
         public IActionResult Index(long? teamId, string teamName, int pageNum = 0)
         {
-            int pageSize = 5;
+            int pageSize = 2;
 
             return View(new IndexViewModel
             {

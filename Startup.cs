@@ -56,17 +56,17 @@ namespace BowlingApp
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("teamNamepagenum",
-                    "teamName/{teamId}/{teamName}/{PageNum}",
+                    "{teamId}/{teamName}/{pageNum}",
                     new { Controller = "Home", action = "Index" });
 
-                endpoints.MapControllerRoute("TeamId",
-                    "Team/{Team}",
-                    new {Controller = "Home", action = "Index", PageNum = 1}
+                endpoints.MapControllerRoute("teamId",
+                    "Team/{teamId}/{teamName}",
+                    new {Controller = "Home", action = "Index", pageNum = 1}
                     );
 
                 endpoints.MapControllerRoute("PageNum",
-                    "{PageNum}",
-                    new { Controller = "Home", action = "Index", PageNum = 1 }
+                    "{pageNum}",
+                    new { Controller = "Home", action = "Index"}
                     );
 
                 endpoints.MapControllerRoute(
