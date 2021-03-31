@@ -58,7 +58,7 @@ namespace BowlingApp
                 endpoints.MapControllerRoute("teamNamepagenum",
                     "{teamId}/{teamName}/{pageNum}",
                     new { Controller = "Home", action = "Index" });
-
+                //this passes the correct information through the url to make sure the teams are highlighted
                 endpoints.MapControllerRoute("teamId",
                     "Team/{teamId}/{teamName}",
                     new {Controller = "Home", action = "Index", pageNum = 1}
